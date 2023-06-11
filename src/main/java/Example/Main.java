@@ -38,7 +38,7 @@ public class Main {
         entityManager.persist(course);
 
         // Updating data
-        course.setCourseTopic("Learning and understanding basics and advanced concepts of the programming language Java");
+        course.setCourseTopic("Learning and understanding basic and advanced concepts of the programming language Java");
         entityManager.persist(course);
 
         // Finding data
