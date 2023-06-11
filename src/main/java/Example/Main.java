@@ -43,7 +43,5 @@ public class Main {
 
         // Finding data
         Course courseFind = entityManager.find(Course.class, 524);
-
-        //Test
     }
 }
