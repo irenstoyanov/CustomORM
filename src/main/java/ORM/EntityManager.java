@@ -77,6 +77,20 @@ public interface EntityManager {
      * Used to either insert the new data in the entity's corresponding database table,
      * or if the entity already exists there, it just updates it.
      *
+     * How it works:
+     *
+     * When the id of the class is annotated with the Id and the GeneratedValue annotations
+     * - If the current object doesn't have a value for its id, then
+     *   the object is inserted into the table with an auto generated id;
+     *   If its id has a value, then it checks if an entity with such id exists
+     *   in the database table, and if it does, it updates it with the current object's fields.
+     *
+     * When the id of the class is annotated only with the Id annotation
+     * - Checks if an entity with the current object's id exists in the database
+     *   table, and if it does, it updates it with the current object's
+     *   fields, and if it does not, it inserts it.
+     *
+     *
      * @param entity Current persist entity
      * @return True if the insert/update query was executed properly;
      * False if the query was not executed properly or if
