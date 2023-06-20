@@ -17,7 +17,7 @@ Features
 
 How to annotate a Java Class properly
 ---
-Here we have an exaple class **Student**, which has some basic fields like id, name, age and it has a field with a class type **School**, which refers to the school the current student attends.
+Here we have an exaple class **Student**, which has some basic fields like id, name, age, and it has a field with a class type **School**, which refers to the school the current student attends.
 
 ![Java Class](images/JavaClass.png)
 
@@ -29,7 +29,7 @@ How to use the ORM
 ---
 Now to create a table using the **Student** class and to do other database operations with this ORM, you need to learn how to use it. Open your class, which has the **main** method in it and let's get started.
 
-1. First we need to create a connection with the databsae, using the **Connector** class:
+1. First we need to create a connection with the database, using the **Connector** class:
 
    ![Connection](images/Connection.png)
 
@@ -38,11 +38,12 @@ Now to create a table using the **Student** class and to do other database opera
    ![EntityManager](images/EntityManager.png)
 
 3. Now because we have a foreign key field in the **Student** class, that refers to the **School** class, we need to create a table for the **School** class first, because otherwise we will break the program :)
+   *I won't be showing the **School** class, because it is not important for this example.*
 
    ![CreateTable](images/CreateTable.png)
 
-   This is how the **students** table will look like inisde MySQL after running the *createTable()* method:
+   This is how the **students** table will look like inside MySQL after running the *createTable()* method:
 
    ![MySQL Table](images/MySQL_Table.png)
 
-4. And from now on we can do all kinds of operations with these tables: we can create instances of the Java Classes and insert them into their tables, we can later delete them from the tables if we want to, we can drop the tables, etc. For more examples, open the **Main** class inside of the **Example** folder.
+5. And from now on we can do all kinds of operations with these tables: we can create instances of the Java Classes and insert them into their tables, we can later delete them from the tables if we want to, we can drop the tables, etc. For more examples, open the **Main** class inside the **Example** folder.
